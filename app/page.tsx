@@ -265,14 +265,14 @@ export default function Page() {
           <table style={styles.table}>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Skip</th>
-                <th>Source</th>
-                <th>Quote</th>
-                <th>Status</th>
-                <th>Loss Reason</th>
+                <th style={styles.th}>Name</th>
+                <th style={styles.th}>Phone</th>
+                <th style={styles.th}>Email</th>
+                <th style={styles.th}>Skip</th>
+                <th style={styles.th}>Source</th>
+                <th style={styles.th}>Quote</th>
+                <th style={styles.th}>Status</th>
+                <th style={styles.th}>Loss Reason</th>
               </tr>
             </thead>
             <tbody>
