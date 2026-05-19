@@ -313,7 +313,7 @@ const stats = useMemo(() => {
                 <tr key={lead.id}>
                   <td style={styles.td}>   <input     style={styles.cellInput}     value={lead.name}     onChange={(e) => updateLead(lead, 'name', e.target.value)}   /> </td>
                   <td style={styles.td}>   <input     style={styles.cellInput}     value={lead.phone}     onChange={(e) => updateLead(lead, 'phone', e.target.value)}   /> </td>
-                  <td style={styles.td}>{lead.email}</td>
+                  <td style={styles.td}>   <input     style={styles.cellInput}     value={lead.email}     onChange={(e) => updateLead(lead, 'email', e.target.value)}   /> </td>
                   <td style={styles.td}>{lead.skip_size}</td>
                   <td style={styles.td}>{lead.source}</td>
                   <td style={styles.td}>   <input     style={styles.cellInput}     type="number"     value={lead.quoteValue ?? ''}     onChange={(e) =>       updateLead(         lead,         'quoteValue',         e.target.value ? Number(e.target.value) : null       )     }   /> </td>
