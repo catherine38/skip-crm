@@ -1,6 +1,7 @@
 'use client'
 
-import Image from 'next/image' import { useEffect, useMemo, useState } from 'react'
+import Image from 'next/image'
+import { useEffect, useMemo, useState } from 'react'
 
 type Lead = {
   id?: string
