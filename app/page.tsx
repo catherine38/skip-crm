@@ -311,7 +311,7 @@ const stats = useMemo(() => {
             <tbody>
               {filteredLeads.map((lead) => (
                 <tr key={lead.id}>
-                  <td style={styles.td}>{lead.name}</td>
+                  <td style={styles.td}>   <input     style={styles.cellInput}     value={lead.name}     onChange={(e) => updateLead(lead, 'name', e.target.value)}   /> </td>
                   <td style={styles.td}>   <input     style={styles.cellInput}     value={lead.phone}     onChange={(e) => updateLead(lead, 'phone', e.target.value)}   /> </td>
                   <td style={styles.td}>{lead.email}</td>
                   <td style={styles.td}>{lead.skip_size}</td>
