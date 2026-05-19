@@ -250,7 +250,7 @@ const stats = useMemo(() => {
   <div
     style={{
       display: 'grid',
-      gridTemplateColumns: '180px 1fr 140px',
+      gridTemplateColumns: '260px 1fr 140px',
       alignItems: 'center',
       width: '100%',
       gap: 20,
