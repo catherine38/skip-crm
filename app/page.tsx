@@ -278,18 +278,18 @@ export default function Page() {
             <tbody>
               {leads.map((lead) => (
                 <tr key={lead.id}>
-                  <td>{lead.name}</td>
-                  <td>{lead.phone}</td>
-                  <td>{lead.email}</td>
-                  <td>{lead.skip_size}</td>
-                  <td>{lead.source}</td>
-                  <td>{money(lead.quoteValue)}</td>
-                  <td>
+                  <td style={styles.td}>{lead.name}</td>
+                  <td style={styles.td}>{lead.phone}</td>
+                  <td style={styles.td}>{lead.email}</td>
+                  <td style={styles.td}>{lead.skip_size}</td>
+                  <td style={styles.td}>{lead.source}</td>
+                  <td style={styles.td}>{money(lead.quoteValue)}</td>
+                  <td style={styles.td}>
                     <select value={lead.status} onChange={(e) => updateLead(lead, 'status', e.target.value)}>
                       {statuses.map((s) => <option key={s}>{s}</option>)}
                     </select>
                   </td>
-                  <td>
+                  <td style={styles.td}>
                     {lead.status === 'Lost' ? (
                       <select value={lead.lossReason || ''} onChange={(e) => updateLead(lead, 'lossReason', e.target.value)}>
                         <option value="">Select</option>
