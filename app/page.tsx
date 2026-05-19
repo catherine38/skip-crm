@@ -187,14 +187,42 @@ export default function Page() {
     if (session) loadLeads()
   }, [session])
 
-  const filteredLeads = useMemo(() => {   const q = search.toLowerCase().trim()   if (!q) return leads    return leads.filter((lead) =>     [       lead.name,       lead.company,       lead.phone,       lead.email,       lead.eircode,       lead.skip_size,       lead.source,       lead.status,     ]       .join(' ')       .toLowerCase()       .includes(q)   ) }, [leads, search])
-    const total = leads.length
-    const won = leads.filter((l) => l.status === 'Won').length
-    const lost = leads.filter((l) => l.status === 'Lost').length
-    const quoted = leads.filter((l) => ['Quote', 'Follow-up', 'Won', 'Lost'].includes(l.status)).length
-    const quoteToWon = quoted ? Math.round((won / quoted) * 100) : 0
-    return { total, won, lost, quoted, quoteToWon }
-  }, [leads])
+  const filteredLeads = useMemo(() => {
+  const q = search.toLowerCase().trim()
+
+  if (!q) return leads
+
+  return leads.filter((lead) =>
+    [
+      lead.name,
+      lead.company,
+      lead.phone,
+      lead.email,
+      lead.eircode,
+      lead.skip_size,
+      lead.source,
+      lead.status,
+    ]
+      .join(' ')
+      .toLowerCase()
+      .includes(q)
+  )
+}, [leads, search])
+
+const stats = useMemo(() => {
+  const total = leads.length
+  const won = leads.filter((l) => l.status === 'Won').length
+  const lost = leads.filter((l) => l.status === 'Lost').length
+  const quoted = leads.filter((l) =>
+    ['Quote', 'Follow-up', 'Won', 'Lost'].includes(l.status)
+  ).length
+
+  const quoteToWon = quoted
+    ? Math.round((won / quoted) * 100)
+    : 0
+
+  return { total, won, lost, quoted, quoteToWon }
+}, [leads])
 
   if (!session) {
     return (
