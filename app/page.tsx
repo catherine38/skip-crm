@@ -341,4 +341,9 @@ const styles: Record<string, React.CSSProperties> = {
   tableWrap: { overflowX: 'auto' },
   table: {   width: '100%',   borderCollapse: 'collapse',   tableLayout: 'fixed', },  th: {   textAlign: 'left',   padding: 10,   borderBottom: '2px solid #e2e8f0',   color: '#05224a',   fontSize: 14, },  td: {   padding: 10,   borderBottom: '1px solid #e2e8f0',   fontSize: 14,   verticalAlign: 'top', },
   empty: { textAlign: 'center', padding: 20, color: '#64748b' },
-}
+statusSelect: {
+  padding: 6,
+  borderRadius: 8,
+  border: '1px solid #cbd5e1',
+  fontWeight: 700,
+},
