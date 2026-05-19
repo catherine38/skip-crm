@@ -316,7 +316,7 @@ const stats = useMemo(() => {
                   <td style={styles.td}>{lead.email}</td>
                   <td style={styles.td}>{lead.skip_size}</td>
                   <td style={styles.td}>{lead.source}</td>
-                  <td style={styles.td}>{money(lead.quoteValue)}</td>
+                  <td style={styles.td}>   <input     style={styles.cellInput}     type="number"     value={lead.quoteValue ?? ''}     onChange={(e) =>       updateLead(         lead,         'quoteValue',         e.target.value ? Number(e.target.value) : null       )     }   /> </td>
                   <td style={styles.td}>
                     <select   style={{     ...styles.statusSelect,     background:       lead.status === 'Won' ? '#dcfce7' :       lead.status === 'Lost' ? '#fee2e2' :       lead.status === 'Follow-up' ? '#fef9c3' :       lead.status === 'Quote' ? '#dbeafe' :       '#f1f5f9',   }}   value={lead.status}   onChange={(e) => updateLead(lead, 'status', e.target.value)} >
                       {statuses.map((s) => <option key={s}>{s}</option>)}
