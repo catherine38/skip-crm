@@ -277,8 +277,8 @@ const stats = useMemo(() => {
         <Image
           src="/logo.png"
           alt="O'Toole Skip Hire"
-          width={95}
-          height={95}
+          width={220}
+          height={90}
         />
       </div>
     </div>
