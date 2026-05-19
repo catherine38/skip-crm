@@ -26,7 +26,7 @@ const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 const statuses = ['Lead', 'Quote', 'Follow-up', 'Won', 'Lost'] as const
 const skipSizes = ['Mini', 'Midi', '4', '7', '12', '14', '20', '30', '40']
-const leadSources = ['Phone', 'Website', 'Facebook', 'Walk-in']
+const leadSources = [   'Phone',   'Email',   'Website',   'Facebook',   'Instagram',   'Google',   'Referral',   'Returning Customer', ]
 const lossReasons = ['Price too high', 'Went with competitor', 'No longer needed', 'No access / permit issue', 'Outside delivery area', 'Other']
 
 const today = new Date().toISOString().slice(0, 10)
