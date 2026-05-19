@@ -339,12 +339,9 @@ const styles: Record<string, React.CSSProperties> = {
   button: { padding: 10, borderRadius: 10, border: 'none', background: '#05224a', color: 'white', fontWeight: 700, cursor: 'pointer' },
   lightButton: { padding: '8px 14px', borderRadius: 10, border: '1px solid white', background: 'transparent', color: 'white', fontWeight: 700, cursor: 'pointer' },
   tableWrap: { overflowX: 'auto' },
-  table: {   width: '100%',   borderCollapse: 'collapse',   tableLayout: 'fixed', },  th: {   textAlign: 'left',   padding: 10,   borderBottom: '2px solid #e2e8f0',   color: '#05224a',   fontSize: 14, },  td: {   padding: 10,   borderBottom: '1px solid #e2e8f0',   fontSize: 14,   verticalAlign: 'top', },
+  table: { width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' },
+  th: { textAlign: 'left', padding: 10, borderBottom: '2px solid #e2e8f0', color: '#05224a', fontSize: 14 },
+  td: { padding: 10, borderBottom: '1px solid #e2e8f0', fontSize: 14, verticalAlign: 'top' },
   empty: { textAlign: 'center', padding: 20, color: '#64748b' },
-statusSelect: {
-  padding: 6,
-  borderRadius: 8,
-  border: '1px solid #cbd5e1',
-  fontWeight: 700,
-},
+  statusSelect: { padding: 6, borderRadius: 8, border: '1px solid #cbd5e1', fontWeight: 700 },
 }
