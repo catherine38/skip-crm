@@ -312,7 +312,7 @@ const stats = useMemo(() => {
               {filteredLeads.map((lead) => (
                 <tr key={lead.id}>
                   <td style={styles.td}>{lead.name}</td>
-                  <td style={styles.td}>{lead.phone}</td>
+                  <td style={styles.td}>   <input     style={styles.cellInput}     value={lead.phone}     onChange={(e) => updateLead(lead, 'phone', e.target.value)}   /> </td>
                   <td style={styles.td}>{lead.email}</td>
                   <td style={styles.td}>{lead.skip_size}</td>
                   <td style={styles.td}>{lead.source}</td>
@@ -376,5 +376,5 @@ const styles: Record<string, React.CSSProperties> = {
   th: { textAlign: 'left', padding: 10, borderBottom: '2px solid #e2e8f0', color: '#05224a', fontSize: 14 },
   td: { padding: 10, borderBottom: '1px solid #e2e8f0', fontSize: 14, verticalAlign: 'top' },
   empty: { textAlign: 'center', padding: 20, color: '#64748b' },
-  statusSelect: { padding: 6, borderRadius: 8, border: '1px solid #cbd5e1', fontWeight: 700 },
+  cellInput: {   width: '100%',   padding: 6,   borderRadius: 8,   border: '1px solid #cbd5e1', },
 }
