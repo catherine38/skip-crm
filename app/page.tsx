@@ -187,7 +187,7 @@ export default function Page() {
     if (session) loadLeads()
   }, [session])
 
-  const stats = useMemo(() => {
+  const filteredLeads = useMemo(() => {   const q = search.toLowerCase().trim()   if (!q) return leads    return leads.filter((lead) =>     [       lead.name,       lead.company,       lead.phone,       lead.email,       lead.eircode,       lead.skip_size,       lead.source,       lead.status,     ]       .join(' ')       .toLowerCase()       .includes(q)   ) }, [leads, search])
     const total = leads.length
     const won = leads.filter((l) => l.status === 'Won').length
     const lost = leads.filter((l) => l.status === 'Lost').length
@@ -260,7 +260,12 @@ export default function Page() {
 
       <section style={styles.card}>
         <h2 style={styles.cardTitle}>Live Leads</h2>
-
+<input
+  style={{ ...styles.input, marginBottom: 12, width: '100%' }}
+  placeholder="Search customer, phone, email, Eircode, company..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+/>
         <div style={styles.tableWrap}>
           <table style={styles.table}>
             <thead>
@@ -276,7 +281,7 @@ export default function Page() {
               </tr>
             </thead>
             <tbody>
-              {leads.map((lead) => (
+              {filteredLeads.map((lead) => (
                 <tr key={lead.id}>
                   <td style={styles.td}>{lead.name}</td>
                   <td style={styles.td}>{lead.phone}</td>
@@ -299,7 +304,7 @@ export default function Page() {
                   </td>
                 </tr>
               ))}
-              {leads.length === 0 && (
+              {filteredLeads.length === 0 && (
                 <tr>
                   <td colSpan={8} style={{ ...styles.td, ...styles.empty }}>{loading ? 'Loading...' : 'No leads added yet.'}</td>
                 </tr>
