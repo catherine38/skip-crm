@@ -249,51 +249,79 @@ const stats = useMemo(() => {
      <section style={styles.header}>
   <div
     style={{
-      display: 'flex',
+      display: 'grid',
+      gridTemplateColumns: '180px 1fr 140px',
       alignItems: 'center',
       width: '100%',
-      gap: 28,
+      gap: 20,
     }}
   >
     <div
       style={{
-        background: 'white',
-        padding: 18px 34px,
-        borderRadius: 18,
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 120,
-        minHeight: 120,
+        alignItems: 'center',
       }}
     >
-      <Image
-        src="/logo.png"
-        alt="O'Toole Skip Hire"
-        width={90}
-        height={90}
-      />
+      <div
+        style={{
+          background: 'white',
+          padding: '18px 34px',
+          borderRadius: 24,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        }}
+      >
+        <Image
+          src="/logo.png"
+          alt="O'Toole Skip Hire"
+          width={95}
+          height={95}
+        />
+      </div>
     </div>
 
     <div
       style={{
-        flex: 1,
         textAlign: 'center',
       }}
     >
-      <h1 style={styles.title}>O&apos;Toole Skip CRM</h1>
+      <h1
+        style={{
+          ...styles.title,
+          marginBottom: 8,
+        }}
+      >
+        O&apos;Toole Skip CRM
+      </h1>
 
-      <p style={styles.subtitle}>
+      <p
+        style={{
+          ...styles.subtitle,
+          margin: 0,
+          fontSize: 18,
+        }}
+      >
         Marketing enquiry tracker and follow-up tool
       </p>
     </div>
 
-    <button
-      style={styles.lightButton}
-      onClick={() => setSession(null)}
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+      }}
     >
-      Logout
-    </button>
+      <button
+        style={styles.lightButton}
+        onClick={() => setSession(null)}
+      >
+        Logout
+      </button>
+    </div>
   </div>
 </section>
 
