@@ -246,22 +246,56 @@ const stats = useMemo(() => {
 
   return (
     <main style={styles.page}>
-      <section style={styles.header}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-  <Image
-    src="/logo.png"
-    alt="O'Toole Skip Hire"
-    width={70}
-    height={70}
-  />
+     <section style={styles.header}>
+  <div
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      width: '100%',
+      gap: 28,
+    }}
+  >
+    <div
+      style={{
+        background: 'white',
+        padding: 14,
+        borderRadius: 18,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minWidth: 120,
+        minHeight: 120,
+      }}
+    >
+      <Image
+        src="/logo.png"
+        alt="O'Toole Skip Hire"
+        width={90}
+        height={90}
+      />
+    </div>
 
-  <div>
-    <h1 style={styles.title}>O&apos;Toole Skip CRM</h1>
-    <p style={styles.subtitle}>Marketing enquiry tracker and follow-up tool</p>
+    <div
+      style={{
+        flex: 1,
+        textAlign: 'center',
+      }}
+    >
+      <h1 style={styles.title}>O&apos;Toole Skip CRM</h1>
+
+      <p style={styles.subtitle}>
+        Marketing enquiry tracker and follow-up tool
+      </p>
+    </div>
+
+    <button
+      style={styles.lightButton}
+      onClick={() => setSession(null)}
+    >
+      Logout
+    </button>
   </div>
-</div>
-        <button style={styles.lightButton} onClick={() => setSession(null)}>Logout</button>
-      </section>
+</section>
 
       <section style={styles.statsGrid}>
         <Stat label="Total Leads" value={stats.total} />
