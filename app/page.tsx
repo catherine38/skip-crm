@@ -77,6 +77,7 @@ export default function Page() {
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
 const [search, setSearch] = useState('')
+  const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
   const headers = useMemo(() => ({
     apikey: SUPABASE_KEY,
     Authorization: `Bearer ${session?.access_token || SUPABASE_KEY}`,
