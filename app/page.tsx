@@ -258,7 +258,7 @@ const stats = useMemo(() => {
     <div
       style={{
         background: 'white',
-        padding: 14,
+        padding: 18px 34px,
         borderRadius: 18,
         display: 'flex',
         alignItems: 'center',
