@@ -347,3 +347,4 @@ statusSelect: {
   border: '1px solid #cbd5e1',
   fontWeight: 700,
 },
+},
