@@ -301,7 +301,7 @@ export default function Page() {
               ))}
               {leads.length === 0 && (
                 <tr>
-                  <td colSpan={8} style={styles.empty}>{loading ? 'Loading...' : 'No leads added yet.'}</td>
+                  <td colSpan={8} style={{ ...styles.td, ...styles.empty }}>{loading ? 'Loading...' : 'No leads added yet.'}</td>
                 </tr>
               )}
             </tbody>
