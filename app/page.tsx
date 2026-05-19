@@ -247,10 +247,19 @@ const stats = useMemo(() => {
   return (
     <main style={styles.page}>
       <section style={styles.header}>
-        <div>
-          <h1 style={styles.title}>O&apos;Toole Skip CRM</h1>
-          <p style={styles.subtitle}>Marketing enquiry tracker and follow-up tool</p>
-        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+  <Image
+    src="/logo.png"
+    alt="O'Toole Skip Hire"
+    width={70}
+    height={70}
+  />
+
+  <div>
+    <h1 style={styles.title}>O&apos;Toole Skip CRM</h1>
+    <p style={styles.subtitle}>Marketing enquiry tracker and follow-up tool</p>
+  </div>
+</div>
         <button style={styles.lightButton} onClick={() => setSession(null)}>Logout</button>
       </section>
 
