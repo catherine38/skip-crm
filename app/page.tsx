@@ -285,7 +285,7 @@ export default function Page() {
                   <td style={styles.td}>{lead.source}</td>
                   <td style={styles.td}>{money(lead.quoteValue)}</td>
                   <td style={styles.td}>
-                    <select value={lead.status} onChange={(e) => updateLead(lead, 'status', e.target.value)}>
+                    <select   style={{     ...styles.statusSelect,     background:       lead.status === 'Won' ? '#dcfce7' :       lead.status === 'Lost' ? '#fee2e2' :       lead.status === 'Follow Up' ? '#fef9c3' :       lead.status === 'Quoted' ? '#dbeafe' :       '#f1f5f9',   }}   value={lead.status}   onChange={(e) => updateLead(lead, 'status', e.target.value)} >
                       {statuses.map((s) => <option key={s}>{s}</option>)}
                     </select>
                   </td>
